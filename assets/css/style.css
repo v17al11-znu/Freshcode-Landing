@@ -174,10 +174,12 @@ button {
 
 .description-header {
     text-transform: uppercase;
+    /* font-size: 2.9vw; */
     font-size: 3.0em;
 }
 
 .description-text {
+    /* font-size: 1.1vw; */
     font-size: 1.2em;
     margin-top: 0.9rem;
     line-height: 1.25;
@@ -193,3 +195,62 @@ button {
     margin: 0.8em 0 5em 0;
 }
 /* End First screen styles */
+
+
+/* Start Additional screen styles */
+.additional-screen {
+    width: 100%;
+    height: 100vh;
+    /* /* padding: 0 4.43em; */
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center;
+    padding: 0 4.43em;
+    box-sizing: border-box;  
+}
+
+.additional-container {
+    background-color: #F1FDFF;
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    display: flex; 
+    flex-direction: row;
+    padding: 2.5em 3.5em;
+    justify-content: space-between;
+    box-sizing: border-box;  
+}
+
+.additional-container-text {
+    font-size: 1.2em;
+    margin-top: 0.9rem;
+    line-height: 1.25;
+}
+
+.additional-container-image {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 0.5em;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}
+
+.additional-container-image-vector {
+    width: 52%;
+    object-fit: cover;
+    border-radius: 0.5em;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}
+
+.additional-container-description {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding-left: 5vw; */
+}
+/* End Additional screen styles */
