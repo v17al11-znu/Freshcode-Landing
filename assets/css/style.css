@@ -6,61 +6,119 @@
 body {
     font-family: "Montserrat";
     font-size: 1em;
+    font-weight: 400;
+}
+
+button {
+    font-family: "Montserrat";
+    font-size: 1em;
+    font-weight: 400;
 }
 /* End General styles (default tags) */
 
 /* Start General custom styles */
 .button-1 {
-    
+    text-transform: uppercase;
+    background-color: white;
+    padding: 1.15em 1.94em;
+    border-radius: 4.8em;
+    text-align: center;
+    border-width: 0;
+    transition: 0.3s;
 }
 
 .button-1-blue {
-    
+    background-color: #7AE5FD;
+}
+
+.button-1-blue:hover {
+    background-color: black;
+    color: white;
 }
 
 .button-1-white {
-    
+    background-color: white;
+}
+
+.button-1-white:hover {
+    background-color: #ffff0e;
 }
 /* End General custom styles */
 
 /* Start Header styles */
 .header-container {
-    
+    display: flex;
+    align-items: center;
+    padding: 2.2em 3.94em;
+    justify-content: space-between;
+    height: 5em;
 }
 
 .logo {
-
+    width: 5em;
+    height: auto;
 }
 
 .menu-list {
-   
+   display: flex;
+   align-items: center;
 }
 
 .menu-item {
-    
+    margin-left: 0.15em;
+    /* margin-left: 3.1em; */
+    font-size: 1.25em;
 }
 
 .main-menu-button {
-    
+    /* margin-left: 1.3em; */
+}
+
+.secondary-menu-button {
+    text-transform: none;
+    /* margin-left: 2.3em; */
+}
+
+.secondary-menu-button:hover {
+    background-color: black;
+    color: white;
 }
 /* End Header styles */
 
 
 /* Start First screen styles */
 .first-screen {
-    
+    background-image: url('../textures/first-screen.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.20em;
 }
 
 .first-screen-container {
-    
+    width: 50%;
+    padding-left: 5vw;
 }
 
 .main-title {
-    
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 4.06em;
+    color: white;
+    line-height: 0.95;
 }
 
 .main-description {
+    margin: 2rem 0;
+    font-size: 1.33em;
+}
 
+.main-button {
+    font-size: 1.25rem;
 }
 /* End First screen styles */
 
