@@ -14,6 +14,13 @@ button {
     font-size: 1em;
     font-weight: 400;
 }
+
+input::placeholder {
+    font-family: "Montserrat";
+    font-size: 1em;
+    font-weight: 400;
+    color: black;
+}
 /* End General styles (default tags) */
 
 /* Start General custom styles */
@@ -42,6 +49,14 @@ button {
 
 .button-1-white:hover {
     background-color: #ffff0e;
+}
+
+.input-1 {
+    background-color: #F9FADF;
+    padding: 1.15em 1.94em;
+    border-radius: 4.8em;
+    /* text-align: center; */
+    border-width: 0;
 }
 /* End General custom styles */
 
@@ -169,7 +184,6 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* padding-left: 5vw; */
 }
 
 .description-header {
@@ -250,24 +264,20 @@ button {
     width: 55%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    /* padding-left: 5vw; */
 }
 /* End Additional screen styles */
 
 
 /* Start Donation screen styles */
 .donation-screen {
-    
+    text-align: center;
 }
 
 .donation-container {
     display: flex; 
     flex-direction: column;
     align-items: center;
-    /* padding: 2.5em 3.5em; */
-    /* justify-content: space-between; */
-    /* box-sizing: border-box;   */
+    justify-content: center;
 }
 
 .donation-header {
@@ -318,16 +328,10 @@ button {
 
 .number .digit {
     position: relative;
-    /* width: 1em; */
     height: 1em;
-    /* overflow: hidden; */
 }
 
 .digit-inner {
-    /* position: absolute; */
-    /* top: 0; */
-    /* left: 0; */
-    /* width: 100%; */
     transition: transform 0.5s ease-in-out;
 }
 
@@ -336,3 +340,114 @@ button {
 }
 /* Counter styles */
 /* End Donation screen styles */
+
+
+/* Start Footer screen styles */
+.footer-screen {
+    background-color: #F9FADF;
+    width: 100%;
+    padding-bottom: 5em;
+}
+
+.footer-container {
+    padding: 4.43em 4.43em 0 4.43em;
+}
+
+.footer-container-left-side-text {
+}
+
+.footer-container-right-side-text {
+    font-size: 1.2em;
+    line-height: 1.25;
+    margin-top: 0.3em;
+    margin-bottom: 3em;
+}
+
+.footer-container-image {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 0.5em;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}
+
+.footer-container-left-side {
+    text-transform: uppercase;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.2em;
+    align-items: center;
+}
+
+.footer-container-right-side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.footer-container-right-side-image {
+    width: 5%;
+    margin-left: -0.1em;
+}
+
+.footer-phone-text {
+    font-weight: 800;
+}
+
+.footer-container-right-side-block-2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.contacts-container {
+    display: flex; 
+    width: 100%;
+}
+
+.feedback-container {
+    background-color: white;
+    width: 100%;
+    height: 60vh;
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.feedback-container-image {
+}
+
+.feedback-container-image-vector {
+    object-fit: cover;
+    width: 40%;
+}
+
+.feedback-container-form {
+    padding: 1em 0;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-container-form-title {
+    font-size: 1.5em;
+}
+
+.feedback-form {
+    margin-top: 2em;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.feedback-form-element {
+    margin: 1em 0;
+}
+
+.feedback-form-button {
+}
+/* End Footer screen styles */
