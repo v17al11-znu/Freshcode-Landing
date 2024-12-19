@@ -128,8 +128,24 @@ button {
 
 }
 
-.description-title {
+.description-title-container {
+    padding: 10em 4.43em;
+    text-align: center;
+}
 
+.description-main-title {
+    font-size: 4.0em;
+}
+
+.description-secondary-title {
+    margin-top: 1.2rem;
+    font-size: 1.55em;
+}
+
+.description-title-text {
+    margin-top: 0.9rem;
+    font-size: 1.20em;
+    color: #73A6B1;
 }
 
 .description-block {
