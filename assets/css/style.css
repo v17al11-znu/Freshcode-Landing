@@ -125,7 +125,10 @@ button {
 
 /* Start First screen styles */
 .description-screen {
-
+    padding: 0 4.43em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .description-title-container {
@@ -134,6 +137,7 @@ button {
 }
 
 .description-main-title {
+    text-transform: uppercase;
     font-size: 4.0em;
 }
 
@@ -149,18 +153,43 @@ button {
 }
 
 .description-block {
+    background-color: #F1FDFF;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    padding: 2.5em 3.5em;
+    justify-content: space-between;
+    box-sizing: border-box;  
+    margin-bottom: 3em; 
+}
 
+.description-block-description {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding-left: 5vw; */
 }
 
 .description-header {
-
-}
-
-.description-sub-header {
-
+    text-transform: uppercase;
+    font-size: 3.0em;
 }
 
 .description-text {
+    font-size: 1.2em;
+    margin-top: 0.9rem;
+    line-height: 1.25;
+}
 
+.description-image {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 0.5em;
+}
+
+.description-footer-button {
+    margin: 0.8em 0 5em 0;
 }
 /* End First screen styles */
