@@ -21,6 +21,11 @@ input::placeholder {
     font-weight: 400;
     color: black;
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
 /* End General styles (default tags) */
 
 /* Start General custom styles */
@@ -62,11 +67,17 @@ input::placeholder {
 
 /* Start Header styles */
 .header-container {
+    z-index: 5;
+    background-color: white;
     display: flex;
     align-items: center;
     padding: 2.2em 3.94em;
     justify-content: space-between;
-    height: 5em;
+    /* height: 5em; */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;  
 }
 
 .logo {
@@ -112,6 +123,7 @@ input::placeholder {
     flex-direction: row;
     align-items: center;
     font-size: 1.20em;
+    margin-top: 9.5rem;
 }
 
 .first-screen-container {
