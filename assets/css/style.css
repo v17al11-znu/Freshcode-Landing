@@ -1,0 +1,92 @@
+/* main at-rules */
+/* main fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap'); 
+
+/* Start General styles (default tags) */
+body {
+    font-family: "Montserrat";
+    font-size: 1em;
+}
+/* End General styles (default tags) */
+
+/* Start General custom styles */
+.button-1 {
+    
+}
+
+.button-1-blue {
+    
+}
+
+.button-1-white {
+    
+}
+/* End General custom styles */
+
+/* Start Header styles */
+.header-container {
+    
+}
+
+.logo {
+
+}
+
+.menu-list {
+   
+}
+
+.menu-item {
+    
+}
+
+.main-menu-button {
+    
+}
+/* End Header styles */
+
+
+/* Start First screen styles */
+.first-screen {
+    
+}
+
+.first-screen-container {
+    
+}
+
+.main-title {
+    
+}
+
+.main-description {
+
+}
+/* End First screen styles */
+
+
+/* Start First screen styles */
+.description-screen {
+
+}
+
+.description-title {
+
+}
+
+.description-block {
+
+}
+
+.description-header {
+
+}
+
+.description-sub-header {
+
+}
+
+.description-text {
+
+}
+/* End First screen styles */
