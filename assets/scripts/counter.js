@@ -91,3 +91,6 @@ function increment() {
 
 // Initialize the counter
 updateCounter(false);
+
+// Set interval for counter
+setInterval(updateCounter, 2000);
