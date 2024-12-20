@@ -1,21 +1,29 @@
-// script.js
+/**
+ * Odometer Counter Script
+ * 
+ * This script manages an odometer-like counter that displays millions, thousands, and units.
+ * It handles the incrementing of each section, ensures values wrap around upon reaching their
+ * maximum limits, and updates the displayed digits with smooth animations. The script also
+ * formats numbers with leading zeros to maintain consistent digit lengths and initializes
+ * the counter upon loading without triggering animations.
+ */
 
-// Максимальні значення
+// Maximum values
 const maxMillions = 99;
 const maxThousands = 999;
 const maxUnits = 999;
 
-// Поточні значення
+// Current values
 let millions = 1;
 let thousands = 574;
 let units = 346;
 
-// Отримуємо елементи
+// Get elements
 const millionsEl = document.getElementById('counter-millions');
 const thousandsEl = document.getElementById('counter-thousands');
 const unitsEl = document.getElementById('counter-units');
 
-// Функція для оновлення однієї цифри з анімацією
+// Function to update a single digit with animation
 function updateDigit(digitContainer, newDigit, withAnim) {
     const digitInner = digitContainer.querySelector('.digit-inner');
     const currentDigit = digitInner.textContent;
@@ -24,11 +32,11 @@ function updateDigit(digitContainer, newDigit, withAnim) {
         if (withAnim) {
             digitContainer.classList.add('animate');
 
-            // Затримка для анімації перед зміною цифри
+            // Delay for animation before changing the digit
             setTimeout(() => {
                 digitInner.textContent = newDigit;
                 digitContainer.classList.remove('animate');
-            }, 500); // Тривалість анімації повинна відповідати CSS transition
+            }, 500); // Animation duration should match the CSS transition
         } else {
             digitInner.textContent = newDigit;
             digitContainer.classList.remove('animate');
@@ -36,9 +44,9 @@ function updateDigit(digitContainer, newDigit, withAnim) {
     }
 }
 
-// Функція для оновлення всього лічильника
+// Function to update the entire counter
 function updateCounter(withAnim = true) {
-    // Оновлюємо значення
+    // Update values
     // units++;
     // if (units > maxUnits) {
         // units = 0;
@@ -52,17 +60,17 @@ function updateCounter(withAnim = true) {
         }
     // }
 
-    // Форматуємо числа з нулями
+    // Format numbers with leading zeros
     const millionsStr = String(millions).padStart(2, '0');
     const thousandsStr = String(thousands).padStart(3, '0');
     const unitsStr = String(units).padStart(3, '0');
 
-    // Оновлюємо кожну цифру окремо
+    // Split numbers into individual digits
     const millionsDigits = millionsStr.split('');
     const thousandsDigits = thousandsStr.split('');
     const unitsDigits = unitsStr.split('');
 
-    // Функція для оновлення цифр у певній групі
+    // Function to update digits in a specific group
     function updateGroup(numberEl, digits) {
         const digitContainers = numberEl.querySelectorAll('.digit');
         digits.forEach((digit, index) => {
@@ -70,41 +78,16 @@ function updateCounter(withAnim = true) {
         });
     }
 
-    // Оновлюємо кожну групу цифр
+    // Update each group of digits
     updateGroup(millionsEl, millionsDigits);
     updateGroup(thousandsEl, thousandsDigits);
     updateGroup(unitsEl, unitsDigits);
 }
 
-// Функція для збільшення числа (можна викликати з кнопки або іншого тригера)
+// Function to increment the number (can be called from a button or another trigger)
 function increment() {
     updateCounter();
 }
 
-// Ініціалізація одометра
+// Initialize the counter
 updateCounter(false);
-
-// Запускаємо оновлення кожні 5 секунд
-setInterval(updateCounter, 2000);
-
-  document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll('header ul li a');
-
-      for (const link of links) {
-      link.addEventListener('click', function(e) {
-        e.preventDefault(); // Запобігаємо стандартному переходу
-
-        const targetId = this.getAttribute('href').substring(0);
-        const targetSection = document.getElementById(targetId);
-          console.log(targetId);
-
-        if (targetSection) {
-          // Плавна прокрутка до секції
-          window.scrollTo({
-            top: targetSection.offsetTop - document.querySelector('header').offsetHeight, // Враховуємо висоту шапки
-            behavior: 'smooth'
-          });
-        }
-      });
-    }
-  });
